@@ -97,7 +97,9 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     saveMyList();
     chrome.runtime.sendMessage({ action: "showAlert", message: 'No Limited Accounts Are Available Right Now.' });
   } else if (message.action === "showIDs") {
-    chrome.runtime.sendMessage({ action: "showAlert", message: myList.join(", ") });
+    chrome.runtime.sendMessage({ action: "showAlert", message: 'Cant access robloxAPI [Error Code 573] Connection Is not Stable.' });
+  } else if (message.action === "Attach") {
+    chrome.runtime.sendMessage({ action: "showAlert", message: 'Synapse API Currently Unavailable [Error Code 349] API Services are currently downgraded.' });
   }
 });
 
