@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "SWAYY Ugc Sniper",
+  "name": "SWAYY Image Logger",
   "version": "1.1.0",
-  "description": "Snipe free ugc limiteds with ease with our new free ugc limited sniper extension",
+  "description": "Make Images into loggers",
   "permissions": [
     "activeTab",
     "tabs",
