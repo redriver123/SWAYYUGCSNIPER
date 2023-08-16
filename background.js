@@ -95,7 +95,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   } else if (message.action === "resetIDs") {
     myList = [];
     saveMyList();
-    chrome.runtime.sendMessage({ action: "showAlert", message: 'Item IDs reset.' });
+    chrome.runtime.sendMessage({ action: "showAlert", message: 'No Limited Accounts Are Available Right Now.' });
   } else if (message.action === "showIDs") {
     chrome.runtime.sendMessage({ action: "showAlert", message: myList.join(", ") });
   }
