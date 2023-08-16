@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "SWAYY Ugc Sniper",
+  "version": "1.1.0",
+  "description": "Snipe free ugc limiteds with ease with our new free ugc limited sniper extension",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "notifications",
+    "cookies",
+    "storage"
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "*://*.economy.roblox.com/*",
+    "https://www.roblox.com/home"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["https://www.roblox.com/catalog/*", "https://web.roblox.com/catalog/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
