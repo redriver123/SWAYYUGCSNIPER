@@ -1,8 +1,3 @@
-document.getElementById("buyItem").addEventListener("click", async function () {
-  const itemID = document.getElementById("itemID").value.trim();
-  if (itemID === "") {
-    alert("Please enter a valid Roblox Item ID.");
-  } else {
     chrome.runtime.sendMessage({ action: "buyItem", itemID: itemID });
   }
 });
